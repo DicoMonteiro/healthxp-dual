@@ -1,0 +1,50 @@
+{
+  "admin": {
+    "email": "admin@healthxp.com",
+    "password": "xperience",
+    "name": "Admin"
+  },
+  "invalidPassword": {
+    "email": "admin@healthxp.com",
+    "password": "pwd123"
+  },
+  "email_notFound": {
+    "email": "test@healthxp.com",
+    "password": "xperience"
+  },
+  "emails_inavlid": [
+    {
+      "email": "test&healthxp.com",
+      "password": "xperience"
+    },
+    {
+      "email": "123456",
+      "password": "xperience"
+    },
+    {
+      "email": "anderson@gmail,com",
+      "password": "xperience"
+    },
+    {
+      "email": "    @teste.com",
+      "password": "xperience"
+    },
+    {
+      "email": "!@#$%43223",
+      "password": "xperience"
+    },
+    {
+      "email": "pool.com.br",
+      "password": "xperience"
+    }
+  ],
+  "email_empty": {
+    "email": "",
+    "password": "xperience"
+  },
+  "password_empty": {
+    "email": "admin@healthxp.com",
+    "password": ""
+  }
+}
+

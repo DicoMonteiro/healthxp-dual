@@ -1,0 +1,23 @@
+{
+    "student_success": {
+        "name": "Adriano Almeida",
+        "email": "adriano@teste.com",
+        "age": "38",
+        "weight": "95",
+        "feet_tall": "1.80"
+    },
+    "student_email_duplicated": {
+        "name": "Jeremy Adams",
+        "email": "jeremy@teste.com",
+        "age": "25",
+        "weight": "78",
+        "feet_tall": "1.82"
+    },
+    "remove_student": {
+        "name": "Bruce Wayne Delete",
+        "email": "bruce@teste.com",
+        "age": "32",
+        "weight": "81",
+        "feet_tall": "1.75"
+    }
+}
