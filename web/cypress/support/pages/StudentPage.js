@@ -1,11 +1,13 @@
 import Navbar from "../components/Navbar"
 import Popup from "../components/Popup"
+import Notification from "../components/Notifications"
 
 class StudentPage {
 
     constructor() {
         this.navbar = Navbar
         this.popup = Popup
+        this.notification = Notification
     }
 
     fillIn(student) {
@@ -31,7 +33,7 @@ class StudentPage {
             .click()
     }
 
-    requiredField(field, msg) {
+    alertMessage(field, msg) {
         cy.contains('label', field)
             .parent()
             .find('span')

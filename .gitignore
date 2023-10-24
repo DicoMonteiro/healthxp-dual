@@ -2,3 +2,6 @@ web/node_modules
 .vscode
 web/cypress/downloads
 web/cypress/videos
+helpers/env
+helpers/node_modules
+mobile/node_modules

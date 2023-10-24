@@ -1,0 +1,17 @@
+{
+    "help": {
+        "student": {
+            "name": "Lidia Nascimento",
+            "email": "lidia@yahoo.com",
+            "age": "25",
+            "weight": "50",
+            "feet_tall": "1.62"
+        },
+        "plan": {
+            "id": 2,
+            "nome": "Premium",
+            "price": 99.99
+        },
+        "question": "Qual o melhor termogênico?"
+    }
+}

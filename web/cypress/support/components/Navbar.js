@@ -7,12 +7,20 @@ class Navbar {
             .should('contain', "Olá, " + user.name)
     }
 
+    accessEnrollments() {
+        cy.get("a[href='/enrollments']").click()
+    }
+
     newStudent() {
         cy.get("a[href='/students/new']").click()
     }
 
     newEnrollment() {
-        cy.get("a[href='/enrollment/new']").click()
+        cy.get("a[href='/enrollments/new']").click()
+    }
+
+    accessNotification() {
+        cy.get('.notifications button').click({ force: true })
     }
 }
 

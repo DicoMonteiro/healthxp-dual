@@ -1,0 +1,30 @@
+{
+    "success_login":{
+        "student": {
+            "name": "Adriano Almeida",
+            "email": "adriano_almeida@teste.com",
+            "age": "38",
+            "weight": "95",
+            "feet_tall": "1.80"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        }
+    },
+    "insuccess_login":{
+        "student": {
+            "name": "Adriano Barreto",
+            "email": "adriano_barreto@teste.com",
+            "age": "38",
+            "weight": "95",
+            "feet_tall": "1.80"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
+    }
+}

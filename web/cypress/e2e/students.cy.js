@@ -1,4 +1,3 @@
-
 import students from '../fixtures/students.json'
 import { faker } from '@faker-js/faker';
 import studentPage from '../support/pages/StudentPage'
@@ -11,8 +10,9 @@ describe('students', () => {
 
 
     it('deve poder cadastrar um novo aluno', () => {
-        const student = students.student_success
-        cy.task('deleteStudent', student.email)
+        const student = students.create
+        //cy.task('deleteStudent', student.email)
+        cy.deleteStudent(student.email)
 
         //Dado que o admin já está logado
         cy.adminLogin()
@@ -29,9 +29,10 @@ describe('students', () => {
     })
 
     it('não deve cadasrar com email duplicado', () => {
-        const student = students.student_email_duplicated
-        cy.task('resetStudent', student)
+        const student = students.email_duplicated
+        //cy.task('resetStudent', student)
 
+        cy.resetStudent(student)
         //Dado que o admin já está logado
         cy.adminLogin()
 
@@ -47,8 +48,9 @@ describe('students', () => {
     })
 
     it('deve remover um aluno sem matrícula', () => {
-        const student = students.remove_student
-        cy.task('resetStudent', student)
+        const student = students.remove
+        //cy.task('resetStudent', student)
+        cy.resetStudent(student)
 
         //Dado que o admin já está logado
         cy.adminLogin()
@@ -67,7 +69,7 @@ describe('students', () => {
 
     })
 
-    it.only('todos os campos são obrigatório', () => {
+    it('todos os campos são obrigatório', () => {
         //Dado que o admin já está logado
         cy.adminLogin()
 
@@ -76,10 +78,61 @@ describe('students', () => {
         studentPage.submit()
         
         //Então deve visualizar mensagem de alerta
-        studentPage.requiredField("Nome completo","Nome é obrigatório")
-        studentPage.requiredField("E-mail","O email é obrigatório")
-        studentPage.requiredField("Idade", "A idade é obrigatória")
-        studentPage.requiredField("Peso (em kg)","O peso é obrigatório")
-        studentPage.requiredField("Altura","A altura é obrigatória")
+        studentPage.alertMessage("Nome completo","Nome é obrigatório")
+        studentPage.alertMessage("E-mail","O email é obrigatório")
+        studentPage.alertMessage("Idade", "A idade é obrigatória")
+        studentPage.alertMessage("Peso (em kg)","O peso é obrigatório")
+        studentPage.alertMessage("Altura","A altura é obrigatória")
+    })
+
+    it('idade inferior a 16 anos', () => {
+        const student = students.under_16_year
+
+        //Dado que o admin já está logado
+        cy.adminLogin()
+
+        //E deseja cadastrar um novo aluno
+        studentPage.navbar.newStudent()
+
+        //Quando solicita cadastrar o novo aluno com idade inferior
+        studentPage.fillIn(student)
+        studentPage.submit()
+
+        //Então deve visualizar a mensagem de alerta
+        studentPage.alertMessage("Idade", "A idade mínima para treinar é 16 anos!")
+    })
+
+    it.skip('idade inferior a 16 anos', () => {
+        const student = students.inv_weight
+
+        //Dado que o admin já está logado
+        cy.adminLogin()
+
+        //E deseja cadastrar um novo aluno
+        studentPage.navbar.newStudent()
+
+        //Quando solicita cadastrar o novo aluno com peso inválido
+        studentPage.fillIn(student)
+        studentPage.submit()
+
+        //Então deve visualizar a mensagem de alerta
+        studentPage.alertMessage("Peso (em kg)", "Peso não permitidos")
+    })
+
+    it.skip('idade inferior a 16 anos', () => {
+        const student = students.inv_feet_tall
+
+        //Dado que o admin já está logado
+        cy.adminLogin()
+
+        //E deseja cadastrar um novo aluno
+        studentPage.navbar.newStudent()
+
+        //Quando solicita cadastrar o novo aluno com altura inválidas
+        studentPage.fillIn(student)
+        studentPage.submit()
+
+        //Então deve visualizar a mensagem de alerta
+        studentPage.alertMessage("Altura", "Altura não permitida")
     })
 })

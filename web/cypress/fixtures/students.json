@@ -1,23 +1,44 @@
 {
-    "student_success": {
+    "create": {
         "name": "Adriano Almeida",
         "email": "adriano@teste.com",
         "age": "38",
         "weight": "95",
         "feet_tall": "1.80"
     },
-    "student_email_duplicated": {
+    "email_duplicated": {
         "name": "Jeremy Adams",
         "email": "jeremy@teste.com",
         "age": "25",
         "weight": "78",
         "feet_tall": "1.82"
     },
-    "remove_student": {
+    "remove": {
         "name": "Bruce Wayne Delete",
         "email": "bruce@teste.com",
         "age": "32",
         "weight": "81",
         "feet_tall": "1.75"
+    },
+    "under_16_year": {
+        "name": "Kevin Bacon",
+        "email": "kevin@teste.com",
+        "age": "15",
+        "weight": "81",
+        "feet_tall": "1.75"
+    },
+    "inv_weight": {
+        "name": "Silvia Santos",
+        "email": "silviad@teste.com",
+        "age": "32",
+        "weight": "0",
+        "feet_tall": "1.75"
+    },
+    "inv_feet_tall": {
+        "name": "George Maycon",
+        "email": "george@teste.com",
+        "age": "32",
+        "weight": "81",
+        "feet_tall": "0"
     }
 }

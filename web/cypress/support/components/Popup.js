@@ -34,6 +34,7 @@ class Popup {
     cancelExclusion() {
         cy.contains('button', 'Não, mudei de ideia').click()
     }
+
 }
 
 export default new Popup()

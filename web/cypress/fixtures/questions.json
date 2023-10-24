@@ -1,0 +1,33 @@
+{
+    "notification": {
+        "student": {
+            "name": "Papito Fernando",
+            "email": "fernando@aol.com",
+            "age": "38",
+            "weight": "95",
+            "feet_tall": "1.80"
+        },
+        "plan": {
+            "id": 2,
+            "nome": "Premium",
+            "price": 99.99
+        },
+        "question": "Qual o melhor termogênico?"
+    },
+    "answer_norification": {
+        "student": {
+            "name": "Raul Padilha",
+            "email": "raulp@gmail.com",
+            "age": "38",
+            "weight": "95",
+            "feet_tall": "1.80"
+        },
+        "plan": {
+            "id": 2,
+            "nome": "Premium",
+            "price": 99.99
+        },
+        "question": "Como ganhar massa muscular?",
+        "answer": "Para ganhar massa magra ou massa muscular, deve-se ter uma reeducação alimentar e consistência nos treinos."
+    }
+}
